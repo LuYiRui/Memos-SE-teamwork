@@ -1,0 +1,952 @@
+{
+  "instance": "http://127.0.0.1:15233",
+  "date": "2026-11-21",
+  "timeZone": "Asia/Shanghai",
+  "account": "uc02review",
+  "requests": [
+    {
+      "scene": "setup",
+      "method": "POST",
+      "path": "/memos.api.InstanceService/GetInstanceProfile",
+      "status": 200,
+      "version": "26.11.0"
+    },
+    {
+      "scene": "setup",
+      "method": "POST",
+      "path": "/memos.api.UserService/CreateUser",
+      "status": 200,
+      "roleNumber": 1
+    },
+    {
+      "scene": "setup",
+      "method": "POST",
+      "path": "/memos.api.InstanceService/GetInstanceProfile",
+      "status": 200,
+      "version": "26.11.0"
+    },
+    {
+      "scene": "setup",
+      "method": "POST",
+      "path": "/memos.api.UserService/GetUserStats",
+      "status": 200,
+      "filter": "",
+      "tagCounts": {}
+    },
+    {
+      "scene": "setup",
+      "method": "POST",
+      "path": "/memos.api.MemoService/ListMemos",
+      "status": 200,
+      "filter": "((creator == \"users/uc02review\"))",
+      "memos": []
+    },
+    {
+      "scene": "setup",
+      "method": "POST",
+      "path": "/memos.api.UserService/ListUserStats",
+      "status": 200,
+      "filter": "(creator == \"users/uc02review\")",
+      "userStats": []
+    },
+    {
+      "scene": "recognition",
+      "method": "POST",
+      "path": "/memos.api.MemoService/CreateMemo",
+      "status": 200,
+      "input": {
+        "name": "",
+        "content": "UC02-A #se"
+      },
+      "memo": {
+        "name": "memos/FsavtHrWUvvzVapEfv7BHh",
+        "content": "UC02-A #se",
+        "tags": [
+          "se"
+        ],
+        "hasCode": false
+      }
+    },
+    {
+      "scene": "recognition",
+      "method": "POST",
+      "path": "/memos.api.UserService/ListUserStats",
+      "status": 200,
+      "filter": "(creator == \"users/uc02review\")",
+      "userStats": [
+        {
+          "name": "users/uc02review/stats",
+          "tagCounts": {
+            "se": 1
+          }
+        }
+      ]
+    },
+    {
+      "scene": "recognition",
+      "method": "POST",
+      "path": "/memos.api.MemoService/ListMemos",
+      "status": 200,
+      "filter": "((creator == \"users/uc02review\"))",
+      "memos": [
+        {
+          "name": "memos/FsavtHrWUvvzVapEfv7BHh",
+          "content": "UC02-A #se",
+          "tags": [
+            "se"
+          ],
+          "hasCode": false
+        }
+      ]
+    },
+    {
+      "scene": "recognition",
+      "method": "POST",
+      "path": "/memos.api.UserService/ListUserStats",
+      "status": 200,
+      "filter": "(creator == \"users/uc02review\")",
+      "userStats": [
+        {
+          "name": "users/uc02review/stats",
+          "tagCounts": {
+            "se": 1
+          }
+        }
+      ]
+    },
+    {
+      "scene": "recognition",
+      "method": "POST",
+      "path": "/memos.api.UserService/GetUserStats",
+      "status": 200,
+      "filter": "",
+      "tagCounts": {
+        "se": 1
+      }
+    },
+    {
+      "scene": "recognition",
+      "method": "POST",
+      "path": "/memos.api.UserService/GetUserStats",
+      "status": 200,
+      "filter": "",
+      "tagCounts": {
+        "se": 1
+      }
+    },
+    {
+      "scene": "recognition",
+      "method": "POST",
+      "path": "/memos.api.MemoService/CreateMemo",
+      "status": 200,
+      "input": {
+        "name": "",
+        "content": "UC02-B #se/backend"
+      },
+      "memo": {
+        "name": "memos/PGCabYhvzQbJykRj6BQzfG",
+        "content": "UC02-B #se/backend",
+        "tags": [
+          "se",
+          "se/backend"
+        ],
+        "hasCode": false
+      }
+    },
+    {
+      "scene": "recognition",
+      "method": "POST",
+      "path": "/memos.api.UserService/ListUserStats",
+      "status": 200,
+      "filter": "(creator == \"users/uc02review\")",
+      "userStats": [
+        {
+          "name": "users/uc02review/stats",
+          "tagCounts": {
+            "se": 2,
+            "se/backend": 1
+          }
+        }
+      ]
+    },
+    {
+      "scene": "recognition",
+      "method": "POST",
+      "path": "/memos.api.MemoService/ListMemos",
+      "status": 200,
+      "filter": "((creator == \"users/uc02review\"))",
+      "memos": [
+        {
+          "name": "memos/PGCabYhvzQbJykRj6BQzfG",
+          "content": "UC02-B #se/backend",
+          "tags": [
+            "se",
+            "se/backend"
+          ],
+          "hasCode": false
+        },
+        {
+          "name": "memos/FsavtHrWUvvzVapEfv7BHh",
+          "content": "UC02-A #se",
+          "tags": [
+            "se"
+          ],
+          "hasCode": false
+        }
+      ]
+    },
+    {
+      "scene": "recognition",
+      "method": "POST",
+      "path": "/memos.api.UserService/GetUserStats",
+      "status": 200,
+      "filter": "",
+      "tagCounts": {
+        "se": 2,
+        "se/backend": 1
+      }
+    },
+    {
+      "scene": "recognition",
+      "method": "POST",
+      "path": "/memos.api.UserService/ListUserStats",
+      "status": 200,
+      "filter": "(creator == \"users/uc02review\")",
+      "userStats": [
+        {
+          "name": "users/uc02review/stats",
+          "tagCounts": {
+            "se": 2,
+            "se/backend": 1
+          }
+        }
+      ]
+    },
+    {
+      "scene": "recognition",
+      "method": "POST",
+      "path": "/memos.api.UserService/GetUserStats",
+      "status": 200,
+      "filter": "",
+      "tagCounts": {
+        "se": 2,
+        "se/backend": 1
+      }
+    },
+    {
+      "scene": "recognition",
+      "method": "POST",
+      "path": "/memos.api.MemoService/CreateMemo",
+      "status": 200,
+      "input": {
+        "name": "",
+        "content": "UC02-C #se-next"
+      },
+      "memo": {
+        "name": "memos/MfwpuzDGybXzFcwzgyRP7w",
+        "content": "UC02-C #se-next",
+        "tags": [
+          "se-next"
+        ],
+        "hasCode": false
+      }
+    },
+    {
+      "scene": "recognition",
+      "method": "POST",
+      "path": "/memos.api.UserService/ListUserStats",
+      "status": 200,
+      "filter": "(creator == \"users/uc02review\")",
+      "userStats": [
+        {
+          "name": "users/uc02review/stats",
+          "tagCounts": {
+            "se-next": 1,
+            "se": 2,
+            "se/backend": 1
+          }
+        }
+      ]
+    },
+    {
+      "scene": "recognition",
+      "method": "POST",
+      "path": "/memos.api.MemoService/ListMemos",
+      "status": 200,
+      "filter": "((creator == \"users/uc02review\"))",
+      "memos": [
+        {
+          "name": "memos/MfwpuzDGybXzFcwzgyRP7w",
+          "content": "UC02-C #se-next",
+          "tags": [
+            "se-next"
+          ],
+          "hasCode": false
+        },
+        {
+          "name": "memos/PGCabYhvzQbJykRj6BQzfG",
+          "content": "UC02-B #se/backend",
+          "tags": [
+            "se",
+            "se/backend"
+          ],
+          "hasCode": false
+        },
+        {
+          "name": "memos/FsavtHrWUvvzVapEfv7BHh",
+          "content": "UC02-A #se",
+          "tags": [
+            "se"
+          ],
+          "hasCode": false
+        }
+      ]
+    },
+    {
+      "scene": "recognition",
+      "method": "POST",
+      "path": "/memos.api.UserService/ListUserStats",
+      "status": 200,
+      "filter": "(creator == \"users/uc02review\")",
+      "userStats": [
+        {
+          "name": "users/uc02review/stats",
+          "tagCounts": {
+            "se": 2,
+            "se/backend": 1,
+            "se-next": 1
+          }
+        }
+      ]
+    },
+    {
+      "scene": "recognition",
+      "method": "POST",
+      "path": "/memos.api.UserService/GetUserStats",
+      "status": 200,
+      "filter": "",
+      "tagCounts": {
+        "se-next": 1,
+        "se": 2,
+        "se/backend": 1
+      }
+    },
+    {
+      "scene": "recognition",
+      "method": "POST",
+      "path": "/memos.api.UserService/GetUserStats",
+      "status": 200,
+      "filter": "",
+      "tagCounts": {
+        "se-next": 1,
+        "se": 2,
+        "se/backend": 1
+      }
+    },
+    {
+      "scene": "recognition",
+      "method": "POST",
+      "path": "/memos.api.MemoService/CreateMemo",
+      "status": 200,
+      "input": {
+        "name": "",
+        "content": "UC02-D se plain"
+      },
+      "memo": {
+        "name": "memos/RXB7TNmmm9yPnXrH4TYUuE",
+        "content": "UC02-D se plain",
+        "tags": [],
+        "hasCode": false
+      }
+    },
+    {
+      "scene": "recognition",
+      "method": "POST",
+      "path": "/memos.api.UserService/GetUserStats",
+      "status": 200,
+      "filter": "",
+      "tagCounts": {
+        "se-next": 1,
+        "se": 2,
+        "se/backend": 1
+      }
+    },
+    {
+      "scene": "recognition",
+      "method": "POST",
+      "path": "/memos.api.MemoService/ListMemos",
+      "status": 200,
+      "filter": "((creator == \"users/uc02review\"))",
+      "memos": [
+        {
+          "name": "memos/RXB7TNmmm9yPnXrH4TYUuE",
+          "content": "UC02-D se plain",
+          "tags": [],
+          "hasCode": false
+        },
+        {
+          "name": "memos/MfwpuzDGybXzFcwzgyRP7w",
+          "content": "UC02-C #se-next",
+          "tags": [
+            "se-next"
+          ],
+          "hasCode": false
+        },
+        {
+          "name": "memos/PGCabYhvzQbJykRj6BQzfG",
+          "content": "UC02-B #se/backend",
+          "tags": [
+            "se",
+            "se/backend"
+          ],
+          "hasCode": false
+        },
+        {
+          "name": "memos/FsavtHrWUvvzVapEfv7BHh",
+          "content": "UC02-A #se",
+          "tags": [
+            "se"
+          ],
+          "hasCode": false
+        }
+      ]
+    },
+    {
+      "scene": "recognition",
+      "method": "POST",
+      "path": "/memos.api.UserService/ListUserStats",
+      "status": 200,
+      "filter": "(creator == \"users/uc02review\")",
+      "userStats": [
+        {
+          "name": "users/uc02review/stats",
+          "tagCounts": {
+            "se-next": 1,
+            "se": 2,
+            "se/backend": 1
+          }
+        }
+      ]
+    },
+    {
+      "scene": "recognition",
+      "method": "POST",
+      "path": "/memos.api.UserService/GetUserStats",
+      "status": 200,
+      "filter": "",
+      "tagCounts": {
+        "se-next": 1,
+        "se": 2,
+        "se/backend": 1
+      }
+    },
+    {
+      "scene": "recognition",
+      "method": "POST",
+      "path": "/memos.api.UserService/ListUserStats",
+      "status": 200,
+      "filter": "(creator == \"users/uc02review\")",
+      "userStats": [
+        {
+          "name": "users/uc02review/stats",
+          "tagCounts": {
+            "se-next": 1,
+            "se": 2,
+            "se/backend": 1
+          }
+        }
+      ]
+    },
+    {
+      "scene": "recognition",
+      "method": "POST",
+      "path": "/memos.api.MemoService/CreateMemo",
+      "status": 200,
+      "input": {
+        "name": "",
+        "content": "UC02-E `#se`"
+      },
+      "memo": {
+        "name": "memos/AF85ssVU2MFG9Ysst7BXEQ",
+        "content": "UC02-E `#se`",
+        "tags": [],
+        "hasCode": true
+      }
+    },
+    {
+      "scene": "recognition",
+      "method": "POST",
+      "path": "/memos.api.UserService/ListUserStats",
+      "status": 200,
+      "filter": "(creator == \"users/uc02review\")",
+      "userStats": [
+        {
+          "name": "users/uc02review/stats",
+          "tagCounts": {
+            "se/backend": 1,
+            "se-next": 1,
+            "se": 2
+          }
+        }
+      ]
+    },
+    {
+      "scene": "recognition",
+      "method": "POST",
+      "path": "/memos.api.MemoService/ListMemos",
+      "status": 200,
+      "filter": "((creator == \"users/uc02review\"))",
+      "memos": [
+        {
+          "name": "memos/AF85ssVU2MFG9Ysst7BXEQ",
+          "content": "UC02-E `#se`",
+          "tags": [],
+          "hasCode": true
+        },
+        {
+          "name": "memos/RXB7TNmmm9yPnXrH4TYUuE",
+          "content": "UC02-D se plain",
+          "tags": [],
+          "hasCode": false
+        },
+        {
+          "name": "memos/MfwpuzDGybXzFcwzgyRP7w",
+          "content": "UC02-C #se-next",
+          "tags": [
+            "se-next"
+          ],
+          "hasCode": false
+        },
+        {
+          "name": "memos/PGCabYhvzQbJykRj6BQzfG",
+          "content": "UC02-B #se/backend",
+          "tags": [
+            "se",
+            "se/backend"
+          ],
+          "hasCode": false
+        },
+        {
+          "name": "memos/FsavtHrWUvvzVapEfv7BHh",
+          "content": "UC02-A #se",
+          "tags": [
+            "se"
+          ],
+          "hasCode": false
+        }
+      ]
+    },
+    {
+      "scene": "recognition",
+      "method": "POST",
+      "path": "/memos.api.UserService/ListUserStats",
+      "status": 200,
+      "filter": "(creator == \"users/uc02review\")",
+      "userStats": [
+        {
+          "name": "users/uc02review/stats",
+          "tagCounts": {
+            "se/backend": 1,
+            "se-next": 1,
+            "se": 2
+          }
+        }
+      ]
+    },
+    {
+      "scene": "recognition",
+      "method": "POST",
+      "path": "/memos.api.UserService/GetUserStats",
+      "status": 200,
+      "filter": "",
+      "tagCounts": {
+        "se-next": 1,
+        "se": 2,
+        "se/backend": 1
+      }
+    },
+    {
+      "scene": "recognition",
+      "method": "POST",
+      "path": "/memos.api.UserService/GetUserStats",
+      "status": 200,
+      "filter": "",
+      "tagCounts": {
+        "se/backend": 1,
+        "se-next": 1,
+        "se": 2
+      }
+    },
+    {
+      "scene": "filter-se",
+      "method": "POST",
+      "path": "/memos.api.MemoService/ListMemos",
+      "status": 200,
+      "filter": "((creator == \"users/uc02review\")) && ((tag in [\"se\"]))",
+      "memos": [
+        {
+          "name": "memos/PGCabYhvzQbJykRj6BQzfG",
+          "content": "UC02-B #se/backend",
+          "tags": [
+            "se",
+            "se/backend"
+          ],
+          "hasCode": false
+        },
+        {
+          "name": "memos/FsavtHrWUvvzVapEfv7BHh",
+          "content": "UC02-A #se",
+          "tags": [
+            "se"
+          ],
+          "hasCode": false
+        }
+      ]
+    },
+    {
+      "scene": "filter-backend",
+      "method": "POST",
+      "path": "/memos.api.MemoService/ListMemos",
+      "status": 200,
+      "filter": "((creator == \"users/uc02review\")) && ((tag in [\"se/backend\"]))",
+      "memos": [
+        {
+          "name": "memos/PGCabYhvzQbJykRj6BQzfG",
+          "content": "UC02-B #se/backend",
+          "tags": [
+            "se",
+            "se/backend"
+          ],
+          "hasCode": false
+        }
+      ]
+    },
+    {
+      "scene": "filter-se-next",
+      "method": "POST",
+      "path": "/memos.api.MemoService/ListMemos",
+      "status": 200,
+      "filter": "((creator == \"users/uc02review\")) && ((tag in [\"se-next\"]))",
+      "memos": [
+        {
+          "name": "memos/MfwpuzDGybXzFcwzgyRP7w",
+          "content": "UC02-C #se-next",
+          "tags": [
+            "se-next"
+          ],
+          "hasCode": false
+        }
+      ]
+    },
+    {
+      "scene": "update",
+      "method": "POST",
+      "path": "/memos.api.MemoService/UpdateMemo",
+      "status": 200,
+      "input": {
+        "name": "memos/FsavtHrWUvvzVapEfv7BHh",
+        "content": "UC02-A #course"
+      },
+      "updateMask": [
+        "content",
+        "update_time"
+      ],
+      "memo": {
+        "name": "memos/FsavtHrWUvvzVapEfv7BHh",
+        "content": "UC02-A #course",
+        "tags": [
+          "course"
+        ],
+        "hasCode": false
+      }
+    },
+    {
+      "scene": "update",
+      "method": "POST",
+      "path": "/memos.api.UserService/ListUserStats",
+      "status": 200,
+      "filter": "(creator == \"users/uc02review\")",
+      "userStats": [
+        {
+          "name": "users/uc02review/stats",
+          "tagCounts": {
+            "se-next": 1,
+            "se": 1,
+            "se/backend": 1,
+            "course": 1
+          }
+        }
+      ]
+    },
+    {
+      "scene": "update",
+      "method": "POST",
+      "path": "/memos.api.MemoService/ListMemos",
+      "status": 200,
+      "filter": "((creator == \"users/uc02review\"))",
+      "memos": [
+        {
+          "name": "memos/AF85ssVU2MFG9Ysst7BXEQ",
+          "content": "UC02-E `#se`",
+          "tags": [],
+          "hasCode": true
+        },
+        {
+          "name": "memos/RXB7TNmmm9yPnXrH4TYUuE",
+          "content": "UC02-D se plain",
+          "tags": [],
+          "hasCode": false
+        },
+        {
+          "name": "memos/MfwpuzDGybXzFcwzgyRP7w",
+          "content": "UC02-C #se-next",
+          "tags": [
+            "se-next"
+          ],
+          "hasCode": false
+        },
+        {
+          "name": "memos/PGCabYhvzQbJykRj6BQzfG",
+          "content": "UC02-B #se/backend",
+          "tags": [
+            "se",
+            "se/backend"
+          ],
+          "hasCode": false
+        },
+        {
+          "name": "memos/FsavtHrWUvvzVapEfv7BHh",
+          "content": "UC02-A #course",
+          "tags": [
+            "course"
+          ],
+          "hasCode": false
+        }
+      ]
+    },
+    {
+      "scene": "update",
+      "method": "POST",
+      "path": "/memos.api.UserService/ListUserStats",
+      "status": 200,
+      "filter": "(creator == \"users/uc02review\")",
+      "userStats": [
+        {
+          "name": "users/uc02review/stats",
+          "tagCounts": {
+            "se-next": 1,
+            "se": 1,
+            "se/backend": 1,
+            "course": 1
+          }
+        }
+      ]
+    },
+    {
+      "scene": "reload",
+      "method": "POST",
+      "path": "/memos.api.InstanceService/GetInstanceProfile",
+      "status": 200,
+      "version": "26.11.0"
+    },
+    {
+      "scene": "reload",
+      "method": "POST",
+      "path": "/memos.api.UserService/ListUserStats",
+      "status": 200,
+      "filter": "(creator == \"users/uc02review\")",
+      "userStats": [
+        {
+          "name": "users/uc02review/stats",
+          "tagCounts": {
+            "se-next": 1,
+            "se": 1,
+            "se/backend": 1,
+            "course": 1
+          }
+        }
+      ]
+    },
+    {
+      "scene": "reload",
+      "method": "POST",
+      "path": "/memos.api.UserService/GetUserStats",
+      "status": 200,
+      "filter": "",
+      "tagCounts": {
+        "se": 1,
+        "se/backend": 1,
+        "course": 1,
+        "se-next": 1
+      }
+    },
+    {
+      "scene": "reload",
+      "method": "POST",
+      "path": "/memos.api.MemoService/ListMemos",
+      "status": 200,
+      "filter": "((creator == \"users/uc02review\"))",
+      "memos": [
+        {
+          "name": "memos/AF85ssVU2MFG9Ysst7BXEQ",
+          "content": "UC02-E `#se`",
+          "tags": [],
+          "hasCode": true
+        },
+        {
+          "name": "memos/RXB7TNmmm9yPnXrH4TYUuE",
+          "content": "UC02-D se plain",
+          "tags": [],
+          "hasCode": false
+        },
+        {
+          "name": "memos/MfwpuzDGybXzFcwzgyRP7w",
+          "content": "UC02-C #se-next",
+          "tags": [
+            "se-next"
+          ],
+          "hasCode": false
+        },
+        {
+          "name": "memos/PGCabYhvzQbJykRj6BQzfG",
+          "content": "UC02-B #se/backend",
+          "tags": [
+            "se",
+            "se/backend"
+          ],
+          "hasCode": false
+        },
+        {
+          "name": "memos/FsavtHrWUvvzVapEfv7BHh",
+          "content": "UC02-A #course",
+          "tags": [
+            "course"
+          ],
+          "hasCode": false
+        }
+      ]
+    },
+    {
+      "scene": "after-course",
+      "method": "POST",
+      "path": "/memos.api.MemoService/ListMemos",
+      "status": 200,
+      "filter": "((creator == \"users/uc02review\")) && ((tag in [\"course\"]))",
+      "memos": [
+        {
+          "name": "memos/FsavtHrWUvvzVapEfv7BHh",
+          "content": "UC02-A #course",
+          "tags": [
+            "course"
+          ],
+          "hasCode": false
+        }
+      ]
+    },
+    {
+      "scene": "after-se",
+      "method": "POST",
+      "path": "/memos.api.MemoService/ListMemos",
+      "status": 200,
+      "filter": "((creator == \"users/uc02review\")) && ((tag in [\"se\"]))",
+      "memos": [
+        {
+          "name": "memos/PGCabYhvzQbJykRj6BQzfG",
+          "content": "UC02-B #se/backend",
+          "tags": [
+            "se",
+            "se/backend"
+          ],
+          "hasCode": false
+        }
+      ]
+    }
+  ],
+  "checks": {
+    "recognition": {
+      "sidebar": {
+        "se": 2,
+        "se/backend": 1,
+        "se-next": 1
+      },
+      "inlineCode": "#se"
+    },
+    "filter-se": {
+      "selectedTag": "se",
+      "visibleSamples": [
+        "A",
+        "B"
+      ]
+    },
+    "filter-backend": {
+      "selectedTag": "se/backend",
+      "visibleSamples": [
+        "B"
+      ]
+    },
+    "filter-se-next": {
+      "selectedTag": "se-next",
+      "visibleSamples": [
+        "C"
+      ]
+    },
+    "after-course": {
+      "selectedTag": "course",
+      "visibleSamples": [
+        "A"
+      ]
+    },
+    "after-se": {
+      "selectedTag": "se",
+      "visibleSamples": [
+        "B"
+      ]
+    }
+  },
+  "browser": "Chrome 157.0.8103.80",
+  "passed": true,
+  "sqliteAfterReload": [
+    {
+      "name": "memos/FsavtHrWUvvzVapEfv7BHh",
+      "content": "UC02-A #course",
+      "visibility": "PRIVATE",
+      "tags": [
+        "course"
+      ],
+      "hasCode": false
+    },
+    {
+      "name": "memos/PGCabYhvzQbJykRj6BQzfG",
+      "content": "UC02-B #se/backend",
+      "visibility": "PRIVATE",
+      "tags": [
+        "se",
+        "se/backend"
+      ],
+      "hasCode": false
+    },
+    {
+      "name": "memos/MfwpuzDGybXzFcwzgyRP7w",
+      "content": "UC02-C #se-next",
+      "visibility": "PRIVATE",
+      "tags": [
+        "se-next"
+      ],
+      "hasCode": false
+    },
+    {
+      "name": "memos/RXB7TNmmm9yPnXrH4TYUuE",
+      "content": "UC02-D se plain",
+      "visibility": "PRIVATE",
+      "tags": [],
+      "hasCode": false
+    },
+    {
+      "name": "memos/AF85ssVU2MFG9Ysst7BXEQ",
+      "content": "UC02-E `#se`",
+      "visibility": "PRIVATE",
+      "tags": [],
+      "hasCode": true
+    }
+  ]
+}
