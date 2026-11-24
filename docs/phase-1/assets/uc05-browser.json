@@ -1,0 +1,41 @@
+{
+  "browser": "158.0.4370.33",
+  "contexts": "A, B and anonymous use three independent BrowserContexts",
+  "results": [
+    {
+      "actor": "a",
+      "url": "http://127.0.0.1:15230/memos/esA4TDTFPuRKy2pBFdv2E6",
+      "screenshot": "uc05-a-private.png",
+      "body": "Memos\nTimeline\nCalendar\nMap\nAttachments\nSearch\nACTIONS\nEdit\nWrite a comment\nShare\nUC05 A\n·\n\nUC05 谢宇轩：可见性与分享测试笔记。\n\nComments\nWrite a comment"
+    },
+    {
+      "actor": "b",
+      "url": "http://127.0.0.1:15230/404",
+      "screenshot": "uc05-b-denied.png",
+      "body": "Memos\nTimeline\nCalendar\nMap\nAttachments\nSearch\nAbout\nRESOURCES\nDocuments\nAPI Docs\nGitHub Repo\n\nThe page you are looking for can't be found.\n\n404"
+    },
+    {
+      "actor": "anon",
+      "url": "http://127.0.0.1:15230/auth?redirect=%2Fmemos%2FesA4TDTFPuRKy2pBFdv2E6",
+      "screenshot": "uc05-anon-normal.png",
+      "body": "Memos\nSign in\n\nWelcome back.\n\nUsername\nPassword\nSign in\n\nDon't have an account yet? Sign up\n\nEnglish\nSystem"
+    },
+    {
+      "actor": "anon",
+      "url": "http://127.0.0.1:15230/memos/shares/8hMSS645ZhuBt9f5iEuCYA",
+      "screenshot": "uc05-anon-share.png",
+      "body": "Memos\nTimeline\nCalendar\nMap\nSearch\nACTIONS\nShare\nSign in to Memos\n\nUC05 谢宇轩：可见性与分享测试笔记。"
+    },
+    {
+      "actor": "a",
+      "screenshot": "uc05-share-panel.png",
+      "body": "Memos\nTimeline\nCalendar\nMap\nAttachments\nSearch\nACTIONS\nEdit\nWrite a comment\nShare\nUC05 A\n·\n\nUC05 谢宇轩：可见性与分享测试笔记。\n\nComments\nWrite a comment\nShare this memo\n\nActive share links\n\nhttp://127.0.0.1:15230/memos/shares/NE8LoFWac8VZN6npfh3PeZ\n\nExpires 11/24/2026\n\nhttp://127.0.0.1:15230/memos/shares/8hMSS645ZhuBt9f5iEuCYA\n\nNever expires\n\nNever\nCreate new link\nClose"
+    },
+    {
+      "actor": "anon",
+      "url": "http://127.0.0.1:15230/auth?redirect=%2F404",
+      "screenshot": "uc05-anon-revoked.png",
+      "body": "Memos\nSign in\n\nWelcome back.\n\nUsername\nPassword\nSign in\n\nDon't have an account yet? Sign up\n\nEnglish\nSystem"
+    }
+  ]
+}

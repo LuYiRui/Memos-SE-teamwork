@@ -1,0 +1,295 @@
+[
+  {
+    "label": "create-space",
+    "actor": "a",
+    "method": "POST",
+    "path": "/api/spaces",
+    "request": {
+      "title": "UC05 test space"
+    },
+    "status": 200,
+    "response": {
+      "name": "spaces/717a609a-b428-43d9-b092-fdf8abdbf962",
+      "title": "UC05 test space",
+      "description": "",
+      "currentUserRole": "ADMIN",
+      "memberCount": 1
+    },
+    "expected": 200
+  },
+  {
+    "label": "create-space-memo",
+    "actor": "a",
+    "method": "POST",
+    "path": "/api/memos",
+    "request": {
+      "content": "UC05 SPACE boundary",
+      "space": "spaces/717a609a-b428-43d9-b092-fdf8abdbf962",
+      "visibility": "SPACE"
+    },
+    "status": 200,
+    "response": {
+      "name": "memos/RBjjY7y7LQLSNTyqKUt3qo",
+      "creator": "users/uc05a",
+      "space": "spaces/717a609a-b428-43d9-b092-fdf8abdbf962",
+      "content": "UC05 SPACE boundary",
+      "visibility": "SPACE",
+      "state": "NORMAL",
+      "pinned": false,
+      "attachments": [],
+      "relations": [],
+      "reactions": [],
+      "tags": [],
+      "property": {
+        "title": "",
+        "hasLink": false,
+        "hasCode": false,
+        "hasTaskList": false,
+        "hasIncompleteTasks": false,
+        "hasInlineImage": false
+      },
+      "snippet": "UC05 SPACE boundary",
+      "createTime": "2026-11-24T02:46:18Z",
+      "updateTime": "2026-11-24T02:46:18Z"
+    },
+    "expected": 200
+  },
+  {
+    "label": "space-members",
+    "actor": "a",
+    "method": "GET",
+    "path": "/api/spaces/717a609a-b428-43d9-b092-fdf8abdbf962/members",
+    "request": null,
+    "status": 200,
+    "response": {
+      "spaceMembers": [
+        {
+          "name": "spaces/717a609a-b428-43d9-b092-fdf8abdbf962/members/uc05a",
+          "user": "users/uc05a",
+          "role": "ADMIN"
+        }
+      ],
+      "nextPageToken": ""
+    },
+    "expected": 200
+  },
+  {
+    "label": "SPACE-a",
+    "actor": "a",
+    "method": "GET",
+    "path": "/api/memos/RBjjY7y7LQLSNTyqKUt3qo",
+    "request": null,
+    "status": 200,
+    "response": {
+      "name": "memos/RBjjY7y7LQLSNTyqKUt3qo",
+      "creator": "users/uc05a",
+      "space": "spaces/717a609a-b428-43d9-b092-fdf8abdbf962",
+      "content": "UC05 SPACE boundary",
+      "visibility": "SPACE",
+      "state": "NORMAL",
+      "pinned": false,
+      "attachments": [],
+      "relations": [],
+      "reactions": [],
+      "tags": [],
+      "property": {
+        "title": "",
+        "hasLink": false,
+        "hasCode": false,
+        "hasTaskList": false,
+        "hasIncompleteTasks": false,
+        "hasInlineImage": false
+      },
+      "snippet": "UC05 SPACE boundary",
+      "createTime": "2026-11-24T02:46:18Z",
+      "updateTime": "2026-11-24T02:46:18Z"
+    },
+    "expected": 200
+  },
+  {
+    "label": "SPACE-b",
+    "actor": "b",
+    "method": "GET",
+    "path": "/api/memos/RBjjY7y7LQLSNTyqKUt3qo",
+    "request": null,
+    "status": 403,
+    "response": {
+      "code": 7,
+      "message": "permission denied",
+      "details": []
+    },
+    "expected": 403
+  },
+  {
+    "label": "SPACE-anon",
+    "actor": "anon",
+    "method": "GET",
+    "path": "/api/memos/RBjjY7y7LQLSNTyqKUt3qo",
+    "request": null,
+    "status": 401,
+    "response": {
+      "code": 16,
+      "message": "authentication required",
+      "details": []
+    },
+    "expected": 401
+  },
+  {
+    "label": "SPACE-admin",
+    "actor": "admin",
+    "method": "GET",
+    "path": "/api/memos/RBjjY7y7LQLSNTyqKUt3qo",
+    "request": null,
+    "status": 200,
+    "response": {
+      "name": "memos/RBjjY7y7LQLSNTyqKUt3qo",
+      "creator": "users/uc05a",
+      "space": "spaces/717a609a-b428-43d9-b092-fdf8abdbf962",
+      "content": "UC05 SPACE boundary",
+      "visibility": "SPACE",
+      "state": "NORMAL",
+      "pinned": false,
+      "attachments": [],
+      "relations": [],
+      "reactions": [],
+      "tags": [],
+      "property": {
+        "title": "",
+        "hasLink": false,
+        "hasCode": false,
+        "hasTaskList": false,
+        "hasIncompleteTasks": false,
+        "hasInlineImage": false
+      },
+      "snippet": "UC05 SPACE boundary",
+      "createTime": "2026-11-24T02:46:18Z",
+      "updateTime": "2026-11-24T02:46:18Z"
+    },
+    "expected": 200
+  },
+  {
+    "label": "space-share-rejected",
+    "actor": "a",
+    "method": "POST",
+    "path": "/api/memos/RBjjY7y7LQLSNTyqKUt3qo/shares",
+    "request": {},
+    "status": 400,
+    "response": {
+      "code": 9,
+      "message": "SPACE audience memos cannot be shared",
+      "details": []
+    },
+    "expected": 400
+  },
+  {
+    "label": "create-archive-sample",
+    "actor": "a",
+    "method": "POST",
+    "path": "/api/memos",
+    "request": {
+      "content": "UC05 archive boundary",
+      "visibility": "PRIVATE"
+    },
+    "status": 200,
+    "response": {
+      "name": "memos/MJsrvEF6ovC8pvY4fvhY8S",
+      "creator": "users/uc05a",
+      "content": "UC05 archive boundary",
+      "visibility": "PRIVATE",
+      "state": "NORMAL",
+      "pinned": false,
+      "attachments": [],
+      "relations": [],
+      "reactions": [],
+      "tags": [],
+      "property": {
+        "title": "",
+        "hasLink": false,
+        "hasCode": false,
+        "hasTaskList": false,
+        "hasIncompleteTasks": false,
+        "hasInlineImage": false
+      },
+      "snippet": "UC05 archive boundary",
+      "createTime": "2026-11-24T02:46:18Z",
+      "updateTime": "2026-11-24T02:46:18Z"
+    },
+    "expected": 200
+  },
+  {
+    "label": "archive-share-created",
+    "actor": "a",
+    "method": "POST",
+    "path": "/api/memos/MJsrvEF6ovC8pvY4fvhY8S/shares",
+    "request": {},
+    "status": 200,
+    "response": {
+      "name": "memos/MJsrvEF6ovC8pvY4fvhY8S/shares/VCewpFcgS7uvkHuLtCkKVX",
+      "createTime": "2026-11-24T02:46:18Z"
+    },
+    "expected": 200
+  },
+  {
+    "label": "archive-memo",
+    "actor": "a",
+    "method": "PATCH",
+    "path": "/api/memos/MJsrvEF6ovC8pvY4fvhY8S?updateMask=state",
+    "request": {
+      "name": "memos/MJsrvEF6ovC8pvY4fvhY8S",
+      "state": "ARCHIVED"
+    },
+    "status": 200,
+    "response": {
+      "name": "memos/MJsrvEF6ovC8pvY4fvhY8S",
+      "creator": "users/uc05a",
+      "content": "UC05 archive boundary",
+      "visibility": "PRIVATE",
+      "state": "ARCHIVED",
+      "pinned": false,
+      "attachments": [],
+      "relations": [],
+      "reactions": [],
+      "tags": [],
+      "property": {
+        "title": "",
+        "hasLink": false,
+        "hasCode": false,
+        "hasTaskList": false,
+        "hasIncompleteTasks": false,
+        "hasInlineImage": false
+      },
+      "snippet": "UC05 archive boundary",
+      "createTime": "2026-11-24T02:46:18Z",
+      "updateTime": "2026-11-24T02:46:18Z"
+    },
+    "expected": 200
+  },
+  {
+    "label": "archive-share-inaccessible",
+    "actor": "anon",
+    "method": "GET",
+    "path": "/api/shares/VCewpFcgS7uvkHuLtCkKVX/memo",
+    "request": null,
+    "status": 404,
+    "response": {
+      "code": 5,
+      "message": "not found",
+      "details": []
+    },
+    "expected": 404
+  },
+  {
+    "label": "archive-new-share-rejected",
+    "actor": "a",
+    "method": "POST",
+    "path": "/api/memos/MJsrvEF6ovC8pvY4fvhY8S/shares",
+    "request": {},
+    "status": 400,
+    "response": {
+      "code": 9,
+      "message": "only active memos can be shared",
+      "details": []
+    },
+    "expected": 400
+  }
+]

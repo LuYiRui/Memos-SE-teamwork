@@ -1,0 +1,47 @@
+{
+  "memo": [
+    {
+      "id": 1,
+      "uid": "esA4TDTFPuRKy2pBFdv2E6",
+      "creator_id": 2,
+      "visibility": "PRIVATE",
+      "row_status": "NORMAL",
+      "content": "UC05 谢宇轩：可见性与分享测试笔记。",
+      "space_id": null
+    },
+    {
+      "id": 2,
+      "uid": "RBjjY7y7LQLSNTyqKUt3qo",
+      "creator_id": 2,
+      "visibility": "SPACE",
+      "row_status": "NORMAL",
+      "content": "UC05 SPACE boundary",
+      "space_id": 1
+    },
+    {
+      "id": 3,
+      "uid": "MJsrvEF6ovC8pvY4fvhY8S",
+      "creator_id": 2,
+      "visibility": "PRIVATE",
+      "row_status": "ARCHIVED",
+      "content": "UC05 archive boundary",
+      "space_id": null
+    }
+  ],
+  "memo_share": [
+    {
+      "id": 2,
+      "uid": "NE8LoFWac8VZN6npfh3PeZ",
+      "memo_id": 1,
+      "creator_id": 2,
+      "expires_ts": 1795488269
+    },
+    {
+      "id": 4,
+      "uid": "VCewpFcgS7uvkHuLtCkKVX",
+      "memo_id": 3,
+      "creator_id": 2,
+      "expires_ts": null
+    }
+  ]
+}

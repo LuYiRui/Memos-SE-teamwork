@@ -1,0 +1,932 @@
+{
+  "date": "2026-11-24T10:44:30.882188+08:00",
+  "base": "http://127.0.0.1:15230",
+  "version": {
+    "version": "26.11.0",
+    "commit": "b40d8a7b573774c52b022c8d6537d6baf2129dc0",
+    "demo": false,
+    "instanceUrl": "",
+    "accessMode": "INSTANCE_ACCESS_MODE_PRIVATE",
+    "needsSetup": false
+  },
+  "users": {
+    "admin": {
+      "name": "users/uc05admin",
+      "username": "uc05admin",
+      "displayName": "UC05 ADMIN",
+      "email": "",
+      "avatarUrl": "",
+      "description": "",
+      "password": "",
+      "role": "ADMIN",
+      "state": "NORMAL",
+      "createTime": "2026-11-24T02:44:26Z",
+      "updateTime": "2026-11-24T02:44:26Z"
+    },
+    "a": {
+      "name": "users/uc05a",
+      "username": "uc05a",
+      "displayName": "UC05 A",
+      "email": "",
+      "avatarUrl": "",
+      "description": "",
+      "password": "",
+      "role": "USER",
+      "state": "NORMAL",
+      "createTime": "2026-11-24T02:44:26Z",
+      "updateTime": "2026-11-24T02:44:26Z"
+    },
+    "b": {
+      "name": "users/uc05b",
+      "username": "uc05b",
+      "displayName": "UC05 B",
+      "email": "",
+      "avatarUrl": "",
+      "description": "",
+      "password": "",
+      "role": "USER",
+      "state": "NORMAL",
+      "createTime": "2026-11-24T02:44:26Z",
+      "updateTime": "2026-11-24T02:44:26Z"
+    }
+  },
+  "records": [
+    {
+      "label": "create-private",
+      "actor": "a",
+      "method": "POST",
+      "path": "/api/memos",
+      "request": {
+        "content": "UC05 谢宇轩：可见性与分享测试笔记。",
+        "visibility": "PRIVATE"
+      },
+      "status": 200,
+      "response": {
+        "name": "memos/esA4TDTFPuRKy2pBFdv2E6",
+        "creator": "users/uc05a",
+        "content": "UC05 谢宇轩：可见性与分享测试笔记。",
+        "visibility": "PRIVATE",
+        "state": "NORMAL",
+        "pinned": false,
+        "attachments": [],
+        "relations": [],
+        "reactions": [],
+        "tags": [],
+        "property": {
+          "title": "",
+          "hasLink": false,
+          "hasCode": false,
+          "hasTaskList": false,
+          "hasIncompleteTasks": false,
+          "hasInlineImage": false
+        },
+        "snippet": "UC05 谢宇轩：可见性与分享测试笔记。",
+        "createTime": "2026-11-24T02:44:26Z",
+        "updateTime": "2026-11-24T02:44:26Z"
+      },
+      "expected": 200
+    },
+    {
+      "label": "private-instance-PRIVATE",
+      "actor": "a",
+      "method": "GET",
+      "path": "/api/memos/esA4TDTFPuRKy2pBFdv2E6",
+      "request": null,
+      "status": 200,
+      "response": {
+        "name": "memos/esA4TDTFPuRKy2pBFdv2E6",
+        "creator": "users/uc05a",
+        "content": "UC05 谢宇轩：可见性与分享测试笔记。",
+        "visibility": "PRIVATE",
+        "state": "NORMAL",
+        "pinned": false,
+        "attachments": [],
+        "relations": [],
+        "reactions": [],
+        "tags": [],
+        "property": {
+          "title": "",
+          "hasLink": false,
+          "hasCode": false,
+          "hasTaskList": false,
+          "hasIncompleteTasks": false,
+          "hasInlineImage": false
+        },
+        "snippet": "UC05 谢宇轩：可见性与分享测试笔记。",
+        "createTime": "2026-11-24T02:44:26Z",
+        "updateTime": "2026-11-24T02:44:26Z"
+      },
+      "expected": 200
+    },
+    {
+      "label": "private-instance-PRIVATE",
+      "actor": "b",
+      "method": "GET",
+      "path": "/api/memos/esA4TDTFPuRKy2pBFdv2E6",
+      "request": null,
+      "status": 403,
+      "response": {
+        "code": 7,
+        "message": "permission denied",
+        "details": []
+      },
+      "expected": 403
+    },
+    {
+      "label": "private-instance-PRIVATE",
+      "actor": "anon",
+      "method": "GET",
+      "path": "/api/memos/esA4TDTFPuRKy2pBFdv2E6",
+      "request": null,
+      "status": 401,
+      "response": {
+        "code": 16,
+        "message": "authentication required",
+        "details": []
+      },
+      "expected": 401
+    },
+    {
+      "label": "private-instance-PRIVATE",
+      "actor": "admin",
+      "method": "GET",
+      "path": "/api/memos/esA4TDTFPuRKy2pBFdv2E6",
+      "request": null,
+      "status": 200,
+      "response": {
+        "name": "memos/esA4TDTFPuRKy2pBFdv2E6",
+        "creator": "users/uc05a",
+        "content": "UC05 谢宇轩：可见性与分享测试笔记。",
+        "visibility": "PRIVATE",
+        "state": "NORMAL",
+        "pinned": false,
+        "attachments": [],
+        "relations": [],
+        "reactions": [],
+        "tags": [],
+        "property": {
+          "title": "",
+          "hasLink": false,
+          "hasCode": false,
+          "hasTaskList": false,
+          "hasIncompleteTasks": false,
+          "hasInlineImage": false
+        },
+        "snippet": "UC05 谢宇轩：可见性与分享测试笔记。",
+        "createTime": "2026-11-24T02:44:26Z",
+        "updateTime": "2026-11-24T02:44:26Z"
+      },
+      "expected": 200
+    },
+    {
+      "label": "set-PROTECTED",
+      "actor": "a",
+      "method": "PATCH",
+      "path": "/api/memos/esA4TDTFPuRKy2pBFdv2E6?updateMask=visibility",
+      "request": {
+        "name": "memos/esA4TDTFPuRKy2pBFdv2E6",
+        "visibility": "PROTECTED"
+      },
+      "status": 200,
+      "response": {
+        "name": "memos/esA4TDTFPuRKy2pBFdv2E6",
+        "creator": "users/uc05a",
+        "content": "UC05 谢宇轩：可见性与分享测试笔记。",
+        "visibility": "PROTECTED",
+        "state": "NORMAL",
+        "pinned": false,
+        "attachments": [],
+        "relations": [],
+        "reactions": [],
+        "tags": [],
+        "property": {
+          "title": "",
+          "hasLink": false,
+          "hasCode": false,
+          "hasTaskList": false,
+          "hasIncompleteTasks": false,
+          "hasInlineImage": false
+        },
+        "snippet": "UC05 谢宇轩：可见性与分享测试笔记。",
+        "createTime": "2026-11-24T02:44:26Z",
+        "updateTime": "2026-11-24T02:44:26Z"
+      },
+      "expected": 200
+    },
+    {
+      "label": "private-instance-PROTECTED",
+      "actor": "a",
+      "method": "GET",
+      "path": "/api/memos/esA4TDTFPuRKy2pBFdv2E6",
+      "request": null,
+      "status": 200,
+      "response": {
+        "name": "memos/esA4TDTFPuRKy2pBFdv2E6",
+        "creator": "users/uc05a",
+        "content": "UC05 谢宇轩：可见性与分享测试笔记。",
+        "visibility": "PROTECTED",
+        "state": "NORMAL",
+        "pinned": false,
+        "attachments": [],
+        "relations": [],
+        "reactions": [],
+        "tags": [],
+        "property": {
+          "title": "",
+          "hasLink": false,
+          "hasCode": false,
+          "hasTaskList": false,
+          "hasIncompleteTasks": false,
+          "hasInlineImage": false
+        },
+        "snippet": "UC05 谢宇轩：可见性与分享测试笔记。",
+        "createTime": "2026-11-24T02:44:26Z",
+        "updateTime": "2026-11-24T02:44:26Z"
+      },
+      "expected": 200
+    },
+    {
+      "label": "private-instance-PROTECTED",
+      "actor": "b",
+      "method": "GET",
+      "path": "/api/memos/esA4TDTFPuRKy2pBFdv2E6",
+      "request": null,
+      "status": 200,
+      "response": {
+        "name": "memos/esA4TDTFPuRKy2pBFdv2E6",
+        "creator": "users/uc05a",
+        "content": "UC05 谢宇轩：可见性与分享测试笔记。",
+        "visibility": "PROTECTED",
+        "state": "NORMAL",
+        "pinned": false,
+        "attachments": [],
+        "relations": [],
+        "reactions": [],
+        "tags": [],
+        "property": {
+          "title": "",
+          "hasLink": false,
+          "hasCode": false,
+          "hasTaskList": false,
+          "hasIncompleteTasks": false,
+          "hasInlineImage": false
+        },
+        "snippet": "UC05 谢宇轩：可见性与分享测试笔记。",
+        "createTime": "2026-11-24T02:44:26Z",
+        "updateTime": "2026-11-24T02:44:26Z"
+      },
+      "expected": 200
+    },
+    {
+      "label": "private-instance-PROTECTED",
+      "actor": "anon",
+      "method": "GET",
+      "path": "/api/memos/esA4TDTFPuRKy2pBFdv2E6",
+      "request": null,
+      "status": 401,
+      "response": {
+        "code": 16,
+        "message": "authentication required",
+        "details": []
+      },
+      "expected": 401
+    },
+    {
+      "label": "private-instance-PROTECTED",
+      "actor": "admin",
+      "method": "GET",
+      "path": "/api/memos/esA4TDTFPuRKy2pBFdv2E6",
+      "request": null,
+      "status": 200,
+      "response": {
+        "name": "memos/esA4TDTFPuRKy2pBFdv2E6",
+        "creator": "users/uc05a",
+        "content": "UC05 谢宇轩：可见性与分享测试笔记。",
+        "visibility": "PROTECTED",
+        "state": "NORMAL",
+        "pinned": false,
+        "attachments": [],
+        "relations": [],
+        "reactions": [],
+        "tags": [],
+        "property": {
+          "title": "",
+          "hasLink": false,
+          "hasCode": false,
+          "hasTaskList": false,
+          "hasIncompleteTasks": false,
+          "hasInlineImage": false
+        },
+        "snippet": "UC05 谢宇轩：可见性与分享测试笔记。",
+        "createTime": "2026-11-24T02:44:26Z",
+        "updateTime": "2026-11-24T02:44:26Z"
+      },
+      "expected": 200
+    },
+    {
+      "label": "set-PUBLIC",
+      "actor": "a",
+      "method": "PATCH",
+      "path": "/api/memos/esA4TDTFPuRKy2pBFdv2E6?updateMask=visibility",
+      "request": {
+        "name": "memos/esA4TDTFPuRKy2pBFdv2E6",
+        "visibility": "PUBLIC"
+      },
+      "status": 200,
+      "response": {
+        "name": "memos/esA4TDTFPuRKy2pBFdv2E6",
+        "creator": "users/uc05a",
+        "content": "UC05 谢宇轩：可见性与分享测试笔记。",
+        "visibility": "PUBLIC",
+        "state": "NORMAL",
+        "pinned": false,
+        "attachments": [],
+        "relations": [],
+        "reactions": [],
+        "tags": [],
+        "property": {
+          "title": "",
+          "hasLink": false,
+          "hasCode": false,
+          "hasTaskList": false,
+          "hasIncompleteTasks": false,
+          "hasInlineImage": false
+        },
+        "snippet": "UC05 谢宇轩：可见性与分享测试笔记。",
+        "createTime": "2026-11-24T02:44:26Z",
+        "updateTime": "2026-11-24T02:44:26Z"
+      },
+      "expected": 200
+    },
+    {
+      "label": "private-instance-PUBLIC",
+      "actor": "a",
+      "method": "GET",
+      "path": "/api/memos/esA4TDTFPuRKy2pBFdv2E6",
+      "request": null,
+      "status": 200,
+      "response": {
+        "name": "memos/esA4TDTFPuRKy2pBFdv2E6",
+        "creator": "users/uc05a",
+        "content": "UC05 谢宇轩：可见性与分享测试笔记。",
+        "visibility": "PUBLIC",
+        "state": "NORMAL",
+        "pinned": false,
+        "attachments": [],
+        "relations": [],
+        "reactions": [],
+        "tags": [],
+        "property": {
+          "title": "",
+          "hasLink": false,
+          "hasCode": false,
+          "hasTaskList": false,
+          "hasIncompleteTasks": false,
+          "hasInlineImage": false
+        },
+        "snippet": "UC05 谢宇轩：可见性与分享测试笔记。",
+        "createTime": "2026-11-24T02:44:26Z",
+        "updateTime": "2026-11-24T02:44:26Z"
+      },
+      "expected": 200
+    },
+    {
+      "label": "private-instance-PUBLIC",
+      "actor": "b",
+      "method": "GET",
+      "path": "/api/memos/esA4TDTFPuRKy2pBFdv2E6",
+      "request": null,
+      "status": 200,
+      "response": {
+        "name": "memos/esA4TDTFPuRKy2pBFdv2E6",
+        "creator": "users/uc05a",
+        "content": "UC05 谢宇轩：可见性与分享测试笔记。",
+        "visibility": "PUBLIC",
+        "state": "NORMAL",
+        "pinned": false,
+        "attachments": [],
+        "relations": [],
+        "reactions": [],
+        "tags": [],
+        "property": {
+          "title": "",
+          "hasLink": false,
+          "hasCode": false,
+          "hasTaskList": false,
+          "hasIncompleteTasks": false,
+          "hasInlineImage": false
+        },
+        "snippet": "UC05 谢宇轩：可见性与分享测试笔记。",
+        "createTime": "2026-11-24T02:44:26Z",
+        "updateTime": "2026-11-24T02:44:26Z"
+      },
+      "expected": 200
+    },
+    {
+      "label": "private-instance-PUBLIC",
+      "actor": "anon",
+      "method": "GET",
+      "path": "/api/memos/esA4TDTFPuRKy2pBFdv2E6",
+      "request": null,
+      "status": 401,
+      "response": {
+        "code": 16,
+        "message": "authentication required",
+        "details": []
+      },
+      "expected": 401
+    },
+    {
+      "label": "private-instance-PUBLIC",
+      "actor": "admin",
+      "method": "GET",
+      "path": "/api/memos/esA4TDTFPuRKy2pBFdv2E6",
+      "request": null,
+      "status": 200,
+      "response": {
+        "name": "memos/esA4TDTFPuRKy2pBFdv2E6",
+        "creator": "users/uc05a",
+        "content": "UC05 谢宇轩：可见性与分享测试笔记。",
+        "visibility": "PUBLIC",
+        "state": "NORMAL",
+        "pinned": false,
+        "attachments": [],
+        "relations": [],
+        "reactions": [],
+        "tags": [],
+        "property": {
+          "title": "",
+          "hasLink": false,
+          "hasCode": false,
+          "hasTaskList": false,
+          "hasIncompleteTasks": false,
+          "hasInlineImage": false
+        },
+        "snippet": "UC05 谢宇轩：可见性与分享测试笔记。",
+        "createTime": "2026-11-24T02:44:26Z",
+        "updateTime": "2026-11-24T02:44:26Z"
+      },
+      "expected": 200
+    },
+    {
+      "label": "instance-public",
+      "actor": "admin",
+      "method": "PATCH",
+      "path": "/api/instance/settings/ACCESS",
+      "request": {
+        "name": "instance/settings/ACCESS",
+        "accessSetting": {
+          "accessMode": "INSTANCE_ACCESS_MODE_PUBLIC"
+        }
+      },
+      "status": 200,
+      "response": {
+        "name": "instance/settings/ACCESS",
+        "accessSetting": {
+          "accessMode": "INSTANCE_ACCESS_MODE_PUBLIC"
+        }
+      },
+      "expected": 200
+    },
+    {
+      "label": "public-instance-PUBLIC",
+      "actor": "anon",
+      "method": "GET",
+      "path": "/api/memos/esA4TDTFPuRKy2pBFdv2E6",
+      "request": null,
+      "status": 200,
+      "response": {
+        "name": "memos/esA4TDTFPuRKy2pBFdv2E6",
+        "creator": "users/uc05a",
+        "content": "UC05 谢宇轩：可见性与分享测试笔记。",
+        "visibility": "PUBLIC",
+        "state": "NORMAL",
+        "pinned": false,
+        "attachments": [],
+        "relations": [],
+        "reactions": [],
+        "tags": [],
+        "property": {
+          "title": "",
+          "hasLink": false,
+          "hasCode": false,
+          "hasTaskList": false,
+          "hasIncompleteTasks": false,
+          "hasInlineImage": false
+        },
+        "snippet": "UC05 谢宇轩：可见性与分享测试笔记。",
+        "createTime": "2026-11-24T02:44:26Z",
+        "updateTime": "2026-11-24T02:44:26Z"
+      },
+      "expected": 200
+    },
+    {
+      "label": "set-PROTECTED",
+      "actor": "a",
+      "method": "PATCH",
+      "path": "/api/memos/esA4TDTFPuRKy2pBFdv2E6?updateMask=visibility",
+      "request": {
+        "name": "memos/esA4TDTFPuRKy2pBFdv2E6",
+        "visibility": "PROTECTED"
+      },
+      "status": 200,
+      "response": {
+        "name": "memos/esA4TDTFPuRKy2pBFdv2E6",
+        "creator": "users/uc05a",
+        "content": "UC05 谢宇轩：可见性与分享测试笔记。",
+        "visibility": "PROTECTED",
+        "state": "NORMAL",
+        "pinned": false,
+        "attachments": [],
+        "relations": [],
+        "reactions": [],
+        "tags": [],
+        "property": {
+          "title": "",
+          "hasLink": false,
+          "hasCode": false,
+          "hasTaskList": false,
+          "hasIncompleteTasks": false,
+          "hasInlineImage": false
+        },
+        "snippet": "UC05 谢宇轩：可见性与分享测试笔记。",
+        "createTime": "2026-11-24T02:44:26Z",
+        "updateTime": "2026-11-24T02:44:26Z"
+      },
+      "expected": 200
+    },
+    {
+      "label": "public-instance-PROTECTED",
+      "actor": "anon",
+      "method": "GET",
+      "path": "/api/memos/esA4TDTFPuRKy2pBFdv2E6",
+      "request": null,
+      "status": 401,
+      "response": {
+        "code": 16,
+        "message": "user not authenticated",
+        "details": []
+      },
+      "expected": 401
+    },
+    {
+      "label": "set-PRIVATE",
+      "actor": "a",
+      "method": "PATCH",
+      "path": "/api/memos/esA4TDTFPuRKy2pBFdv2E6?updateMask=visibility",
+      "request": {
+        "name": "memos/esA4TDTFPuRKy2pBFdv2E6",
+        "visibility": "PRIVATE"
+      },
+      "status": 200,
+      "response": {
+        "name": "memos/esA4TDTFPuRKy2pBFdv2E6",
+        "creator": "users/uc05a",
+        "content": "UC05 谢宇轩：可见性与分享测试笔记。",
+        "visibility": "PRIVATE",
+        "state": "NORMAL",
+        "pinned": false,
+        "attachments": [],
+        "relations": [],
+        "reactions": [],
+        "tags": [],
+        "property": {
+          "title": "",
+          "hasLink": false,
+          "hasCode": false,
+          "hasTaskList": false,
+          "hasIncompleteTasks": false,
+          "hasInlineImage": false
+        },
+        "snippet": "UC05 谢宇轩：可见性与分享测试笔记。",
+        "createTime": "2026-11-24T02:44:26Z",
+        "updateTime": "2026-11-24T02:44:26Z"
+      },
+      "expected": 200
+    },
+    {
+      "label": "public-instance-PRIVATE",
+      "actor": "anon",
+      "method": "GET",
+      "path": "/api/memos/esA4TDTFPuRKy2pBFdv2E6",
+      "request": null,
+      "status": 401,
+      "response": {
+        "code": 16,
+        "message": "user not authenticated",
+        "details": []
+      },
+      "expected": 401
+    },
+    {
+      "label": "instance-private",
+      "actor": "admin",
+      "method": "PATCH",
+      "path": "/api/instance/settings/ACCESS",
+      "request": {
+        "name": "instance/settings/ACCESS",
+        "accessSetting": {
+          "accessMode": "INSTANCE_ACCESS_MODE_PRIVATE"
+        }
+      },
+      "status": 200,
+      "response": {
+        "name": "instance/settings/ACCESS",
+        "accessSetting": {
+          "accessMode": "INSTANCE_ACCESS_MODE_PRIVATE"
+        }
+      },
+      "expected": 200
+    },
+    {
+      "label": "nonowner-create-share",
+      "actor": "b",
+      "method": "POST",
+      "path": "/api/memos/esA4TDTFPuRKy2pBFdv2E6/shares",
+      "request": {},
+      "status": 403,
+      "response": {
+        "code": 7,
+        "message": "permission denied",
+        "details": []
+      },
+      "expected": 403
+    },
+    {
+      "label": "past-expiry",
+      "actor": "a",
+      "method": "POST",
+      "path": "/api/memos/esA4TDTFPuRKy2pBFdv2E6/shares",
+      "request": {
+        "expireTime": "2020-01-01T00:00:00Z"
+      },
+      "status": 400,
+      "response": {
+        "code": 3,
+        "message": "expire_time must be in the future",
+        "details": []
+      },
+      "expected": 400
+    },
+    {
+      "label": "create-share",
+      "actor": "a",
+      "method": "POST",
+      "path": "/api/memos/esA4TDTFPuRKy2pBFdv2E6/shares",
+      "request": {},
+      "status": 200,
+      "response": {
+        "name": "memos/esA4TDTFPuRKy2pBFdv2E6/shares/2DakrmTioW7kZ8FQDwexBn",
+        "createTime": "2026-11-24T02:44:26Z"
+      },
+      "expected": 200
+    },
+    {
+      "label": "private-shared",
+      "actor": "a",
+      "method": "GET",
+      "path": "/api/shares/2DakrmTioW7kZ8FQDwexBn/memo",
+      "request": null,
+      "status": 200,
+      "response": {
+        "name": "memos/esA4TDTFPuRKy2pBFdv2E6",
+        "creator": "users/uc05a",
+        "content": "UC05 谢宇轩：可见性与分享测试笔记。",
+        "visibility": "PRIVATE",
+        "state": "NORMAL",
+        "pinned": false,
+        "attachments": [],
+        "relations": [],
+        "reactions": [],
+        "tags": [],
+        "property": {
+          "title": "",
+          "hasLink": false,
+          "hasCode": false,
+          "hasTaskList": false,
+          "hasIncompleteTasks": false,
+          "hasInlineImage": false
+        },
+        "snippet": "UC05 谢宇轩：可见性与分享测试笔记。",
+        "createTime": "2026-11-24T02:44:26Z",
+        "updateTime": "2026-11-24T02:44:26Z"
+      },
+      "expected": 200
+    },
+    {
+      "label": "private-shared",
+      "actor": "b",
+      "method": "GET",
+      "path": "/api/shares/2DakrmTioW7kZ8FQDwexBn/memo",
+      "request": null,
+      "status": 200,
+      "response": {
+        "name": "memos/esA4TDTFPuRKy2pBFdv2E6",
+        "creator": "users/uc05a",
+        "content": "UC05 谢宇轩：可见性与分享测试笔记。",
+        "visibility": "PRIVATE",
+        "state": "NORMAL",
+        "pinned": false,
+        "attachments": [],
+        "relations": [],
+        "reactions": [],
+        "tags": [],
+        "property": {
+          "title": "",
+          "hasLink": false,
+          "hasCode": false,
+          "hasTaskList": false,
+          "hasIncompleteTasks": false,
+          "hasInlineImage": false
+        },
+        "snippet": "UC05 谢宇轩：可见性与分享测试笔记。",
+        "createTime": "2026-11-24T02:44:26Z",
+        "updateTime": "2026-11-24T02:44:26Z"
+      },
+      "expected": 200
+    },
+    {
+      "label": "private-shared",
+      "actor": "anon",
+      "method": "GET",
+      "path": "/api/shares/2DakrmTioW7kZ8FQDwexBn/memo",
+      "request": null,
+      "status": 200,
+      "response": {
+        "name": "memos/esA4TDTFPuRKy2pBFdv2E6",
+        "creator": "users/uc05a",
+        "content": "UC05 谢宇轩：可见性与分享测试笔记。",
+        "visibility": "PRIVATE",
+        "state": "NORMAL",
+        "pinned": false,
+        "attachments": [],
+        "relations": [],
+        "reactions": [],
+        "tags": [],
+        "property": {
+          "title": "",
+          "hasLink": false,
+          "hasCode": false,
+          "hasTaskList": false,
+          "hasIncompleteTasks": false,
+          "hasInlineImage": false
+        },
+        "snippet": "UC05 谢宇轩：可见性与分享测试笔记。",
+        "createTime": "2026-11-24T02:44:26Z",
+        "updateTime": "2026-11-24T02:44:26Z"
+      },
+      "expected": 200
+    },
+    {
+      "label": "nonowner-revoke",
+      "actor": "b",
+      "method": "DELETE",
+      "path": "/api/memos/esA4TDTFPuRKy2pBFdv2E6/shares/2DakrmTioW7kZ8FQDwexBn",
+      "request": null,
+      "status": 403,
+      "response": {
+        "code": 7,
+        "message": "permission denied",
+        "details": []
+      },
+      "expected": 403
+    },
+    {
+      "label": "nonowner-write",
+      "actor": "b",
+      "method": "PATCH",
+      "path": "/api/memos/esA4TDTFPuRKy2pBFdv2E6?updateMask=content",
+      "request": {
+        "name": "memos/esA4TDTFPuRKy2pBFdv2E6",
+        "content": "unauthorized"
+      },
+      "status": 403,
+      "response": {
+        "code": 7,
+        "message": "permission denied",
+        "details": []
+      },
+      "expected": 403
+    },
+    {
+      "label": "revoke",
+      "actor": "a",
+      "method": "DELETE",
+      "path": "/api/memos/esA4TDTFPuRKy2pBFdv2E6/shares/2DakrmTioW7kZ8FQDwexBn",
+      "request": null,
+      "status": 200,
+      "response": {},
+      "expected": 200
+    },
+    {
+      "label": "revoked-share",
+      "actor": "anon",
+      "method": "GET",
+      "path": "/api/shares/2DakrmTioW7kZ8FQDwexBn/memo",
+      "request": null,
+      "status": 404,
+      "response": {
+        "code": 5,
+        "message": "not found",
+        "details": []
+      },
+      "expected": 404
+    },
+    {
+      "label": "invalid-share",
+      "actor": "anon",
+      "method": "GET",
+      "path": "/api/shares/invalid-test-token/memo",
+      "request": null,
+      "status": 404,
+      "response": {
+        "code": 5,
+        "message": "not found",
+        "details": []
+      },
+      "expected": 404
+    },
+    {
+      "label": "create-short-share",
+      "actor": "a",
+      "method": "POST",
+      "path": "/api/memos/esA4TDTFPuRKy2pBFdv2E6/shares",
+      "request": {
+        "expireTime": "2026-11-24T02:44:29.869860Z"
+      },
+      "status": 200,
+      "response": {
+        "name": "memos/esA4TDTFPuRKy2pBFdv2E6/shares/NE8LoFWac8VZN6npfh3PeZ",
+        "createTime": "2026-11-24T02:44:26Z",
+        "expireTime": "2026-11-24T02:44:29Z"
+      },
+      "expected": 200
+    },
+    {
+      "label": "expired-share",
+      "actor": "anon",
+      "method": "GET",
+      "path": "/api/shares/NE8LoFWac8VZN6npfh3PeZ/memo",
+      "request": null,
+      "status": 404,
+      "response": {
+        "code": 5,
+        "message": "not found",
+        "details": []
+      },
+      "expected": 404
+    },
+    {
+      "label": "browser-share",
+      "actor": "a",
+      "method": "POST",
+      "path": "/api/memos/esA4TDTFPuRKy2pBFdv2E6/shares",
+      "request": {},
+      "status": 200,
+      "response": {
+        "name": "memos/esA4TDTFPuRKy2pBFdv2E6/shares/Rpuk9eSTKSpfijkN3Bc2aQ",
+        "createTime": "2026-11-24T02:44:30Z"
+      },
+      "expected": 200
+    },
+    {
+      "label": "list-shares-includes-expired",
+      "actor": "a",
+      "method": "GET",
+      "path": "/api/memos/esA4TDTFPuRKy2pBFdv2E6/shares",
+      "request": null,
+      "status": 200,
+      "response": {
+        "memoShares": [
+          {
+            "name": "memos/esA4TDTFPuRKy2pBFdv2E6/shares/NE8LoFWac8VZN6npfh3PeZ",
+            "createTime": "2026-11-24T02:44:26Z",
+            "expireTime": "2026-11-24T02:44:29Z"
+          },
+          {
+            "name": "memos/esA4TDTFPuRKy2pBFdv2E6/shares/Rpuk9eSTKSpfijkN3Bc2aQ",
+            "createTime": "2026-11-24T02:44:30Z"
+          }
+        ]
+      },
+      "expected": 200
+    },
+    {
+      "label": "",
+      "actor": "anon",
+      "method": "GET",
+      "path": "/api/instance/profile",
+      "request": null,
+      "status": 200,
+      "response": {
+        "version": "26.11.0",
+        "commit": "b40d8a7b573774c52b022c8d6537d6baf2129dc0",
+        "demo": false,
+        "instanceUrl": "",
+        "accessMode": "INSTANCE_ACCESS_MODE_PRIVATE",
+        "needsSetup": false
+      },
+      "expected": null
+    }
+  ]
+}
