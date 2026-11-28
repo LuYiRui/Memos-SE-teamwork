@@ -131,7 +131,7 @@ HTTP Gateway 的 FailedPrecondition 在本环境映射为 400，勿误写成固�
 
 | 环节 | 实际文件、原始行号与固定链接 | 输入输出与职责 |
 | --- | --- | --- |
-| 编辑器受众 | [web/src/components/MemoEditor/edit/toolbar/AudienceMenu.tsx:29](https://github.com/usememos/memos/blob/b40d8a7b573774c52b022c8d6537d6baf2129dc0/web/src/components/MemoEditor/edit/toolbar/AudienceMenu.tsx#L29-L100) | AudienceMenu：菜单选择受众；编辑器保存时发送 visibility 字段。 |
+| 编辑器受众 | [web/src/components/MemoEditor/edit/Toolbar/AudienceMenu.tsx:29](https://github.com/usememos/memos/blob/b40d8a7b573774c52b022c8d6537d6baf2129dc0/web/src/components/MemoEditor/edit/Toolbar/AudienceMenu.tsx#L29-L100) | AudienceMenu：菜单选择受众；编辑器保存时发送 visibility 字段。 |
 | 详情与分享入口 | [web/src/components/MemoDetailSidebar/MemoDetailSidebar.tsx:112](https://github.com/usememos/memos/blob/b40d8a7b573774c52b022c8d6537d6baf2129dc0/web/src/components/MemoDetailSidebar/MemoDetailSidebar.tsx#L112-L155) | 判断分享管理入口是否可见；Copy Link 仅构造普通地址。 |
 | 分享面板 | [web/src/components/MemoDetailSidebar/MemoSharePanel.tsx:87](https://github.com/usememos/memos/blob/b40d8a7b573774c52b022c8d6537d6baf2129dc0/web/src/components/MemoDetailSidebar/MemoSharePanel.tsx#L87-L165) | handleCreate / handleRevoke：可选到期时间、创建、复制与撤销。 |
 | 请求与缓存 | [web/src/hooks/useMemoShareQueries.ts:24](https://github.com/usememos/memos/blob/b40d8a7b573774c52b022c8d6537d6baf2129dc0/web/src/hooks/useMemoShareQueries.ts#L24-L91) | useCreateMemoShare / useDeleteMemoShare / useSharedMemo；创建、删除后使列表缓存失效；getShareUrl 构造令牌地址。 |
