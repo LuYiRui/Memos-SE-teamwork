@@ -1,0 +1,6 @@
+digraph G { graph [rankdir=TB,bgcolor="white",pad="0.3",nodesep="0.4",ranksep="0.55"]; node [shape=box,style="rounded,filled",fillcolor="#edf4ff",color="#6486ba",fontname="Noto Sans CJK SC",fontsize=13,margin="0.18,0.12"]; edge [fontname="Noto Sans CJK SC",fontsize=10,color="#52647c"];
+browser [label="浏览器\nReact 页面 / 编辑器"];
+subgraph cluster_service { label="Memos 单实例 Go 进程"; fontname="Noto Sans CJK SC"; color="#a5bad6"; http [label="HTTP 服务\n静态资源 / Connect / REST / 文件访问"]; rules [label="API 编排与业务规则\n身份、访问控制、正文派生信息"]; store [label="Store + SQLite 驱动\n查询 / 迁移 / 事务"]; http -> rules [label="服务调用 E03"]; rules -> store [label="对象读写 E09"]; }
+subgraph cluster_volume {label="memos-course-data → /var/opt/memos";fontname="Noto Sans CJK SC"; color="#a5bad6"; db [label="memos_prod.db\nSQLite 数据库"]; files [label="assets/…\n默认 LOCAL 附件字节"];}
+browser -> http [label="同源 HTTP E02"]; store -> db [label="SQL / 事务 E13"]; rules -> files [label="存储适配 E30"]; http -> files [label="授权后文件读取 E36"];
+}

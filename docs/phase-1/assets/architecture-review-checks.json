@@ -1,0 +1,104 @@
+{
+  "date": "2026-11-28",
+  "upstream_commit": "b40d8a7b573774c52b022c8d6537d6baf2129dc0",
+  "method": "文档、固定提交及既有证据静态核对；非运行复验",
+  "documents": [
+    {
+      "file": "docs/phase-1/assets/README.md",
+      "fixed_source_links": 0
+    },
+    {
+      "file": "docs/phase-1/deployment-architecture.md",
+      "fixed_source_links": 58
+    },
+    {
+      "file": "docs/phase-1/peer-review-zhangkaishuo.md",
+      "fixed_source_links": 6
+    },
+    {
+      "file": "docs/phase-1/report.md",
+      "fixed_source_links": 0
+    },
+    {
+      "file": "docs/phase-1/uc-03-search.md",
+      "fixed_source_links": 12
+    },
+    {
+      "file": "docs/phase-1/uc-04-attachments.md",
+      "fixed_source_links": 40
+    },
+    {
+      "file": "docs/phase-1/uc-05-sharing.md",
+      "fixed_source_links": 14
+    },
+    {
+      "file": "docs/phase-1/uc05-summary-for-leader.md",
+      "fixed_source_links": 0
+    },
+    {
+      "file": "docs/phase-2/system-models.md",
+      "fixed_source_links": 0
+    }
+  ],
+  "uc05_sha256": [
+    {
+      "file": "uc05-a-private.png",
+      "matches": true
+    },
+    {
+      "file": "uc05-audience-options.png",
+      "matches": true
+    },
+    {
+      "file": "uc05-browser.json",
+      "matches": true
+    },
+    {
+      "file": "uc05-sqlite.json",
+      "matches": true
+    },
+    {
+      "file": "uc05-anon-share.png",
+      "matches": true
+    },
+    {
+      "file": "uc05-requests.json",
+      "matches": true
+    },
+    {
+      "file": "uc05-anon-revoked.png",
+      "matches": true
+    },
+    {
+      "file": "uc05-share-panel.png",
+      "matches": true
+    },
+    {
+      "file": "uc05-b-denied.png",
+      "matches": true
+    },
+    {
+      "file": "uc05-anon-normal.png",
+      "matches": true
+    },
+    {
+      "file": "uc05-boundaries.json",
+      "matches": true
+    }
+  ],
+  "uc05_archived_assertions": [
+    {
+      "file": "uc05-requests.json",
+      "records": 38,
+      "assertions": 37,
+      "mismatches": []
+    },
+    {
+      "file": "uc05-boundaries.json",
+      "records": 13,
+      "assertions": 13,
+      "mismatches": []
+    }
+  ],
+  "errors": []
+}
